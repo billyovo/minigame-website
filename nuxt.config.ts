@@ -18,7 +18,8 @@ export default defineNuxtConfig({
 		},
 		'@pinia/nuxt',
 		'@nuxt/image',
-		'@nuxtjs/eslint-module'
+		'@nuxtjs/eslint-module',
+		"@nuxtjs/sitemap",
 		// '@nuxtjs/storybook',
 		// '@storybook-vue/nuxt-storybook',
 	],
