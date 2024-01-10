@@ -6,7 +6,7 @@
         <img
           src="/images/background/avatar.png"
           class="w-100 h-100 mascot"
-        />
+        >
       </div>
       <div class="w-75 d-flex align-center flex-column appear">
         <h1 class="style-font mb-10 text-yellow-darken-2 text-h1">

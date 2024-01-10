@@ -5,7 +5,7 @@
     class="pa-2"
   >
     <template #prepend>
-      <img :src="imagePath" :height="30" :width="30" />
+      <NuxtImg placeholder="/images/record/steve.jpg" :src="imagePath" :height="30" :width="30" />
       <div
         class="ribbon"
         :style="{backgroundColor: data.server === ServerChinese.SURVIVAL ? ServerColour.SURVIVAL : ServerColour.SKYBLOCK}"
@@ -19,7 +19,7 @@
     <template #text>
       <v-row>
         <v-col cols="12" class="d-flex align-center">
-          <img :src="`${config.public.baseURL}/logo/events/${eventID}/${eventID}.svg`" :height="25" :width="25" />
+          <img :src="`${config.public.baseURL}/logo/events/${eventID}/${eventID}.svg`" :height="25" :width="25">
           <span class="ml-1">{{ data.event }}</span>
         </v-col>
       </v-row>

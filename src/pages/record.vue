@@ -31,6 +31,7 @@
       <v-col>
         <span>找到 {{ urlParams.mode === RecordMode.RECORD ? recordStore.getRecords.total : recordStore.getCount.total }}個紀錄</span>
         <div class="d-flex flex-wrap flex-row w-100 justify-center">
+          <v-skeleton-loader v-if="stateStore.isLoading" type="avatar, text, text, text" width="250" height="180" class="ma-3" />
           <div v-if="urlParams.mode === RecordMode.RECORD" class="d-flex flex-wrap flex-row w-100 justify-center">
             <RecordCard
               v-for="record in recordStore.getRecords.rows"

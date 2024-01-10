@@ -5,7 +5,7 @@
     class="pa-2"
   >
     <template #prepend>
-      <img :src="imagePath" :height="30" :width="30" />
+      <NuxtImg placeholder="/images/record/steve.jpg" :src="imagePath" :height="30" :width="30" />
     </template>
     <template #title>
       {{ data.name }}

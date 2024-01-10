@@ -8,7 +8,7 @@
     <EventSelector />
 
     <div class="container mt-5 w-100">
-      <img src="/images/events/maze/maze_arena.png" class="w-100" />
+      <img src="/images/events/maze/maze_arena.png" class="w-100">
     </div>
 
     <v-row
