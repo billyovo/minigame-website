@@ -31,7 +31,7 @@ defineProps({
   >
     <v-app-bar-title v-if="!display.mobile.value">
       <NuxtLink to="/">
-        <NuxtImg :src="'/images/logo/brand.svg'" :height="50" class="py-2" />
+        <NuxtImg :src="'/images/logo/brand.png'" :height="50" class="py-2" />
       </NuxtLink>
     </v-app-bar-title>
     <v-spacer />

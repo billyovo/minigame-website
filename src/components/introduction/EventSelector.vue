@@ -72,7 +72,7 @@ const chipsEvents = computed(() => {
 		return {
 			id: event.id,
 			title: event.title,
-			img: `/images/events/${event.id}/${event.id}.svg`,
+			img: `/images/events/${event.id}/${event.id}.png`,
 			arenaImg: `/images/events/${event.id}/${event.id}_arena.png`,
 			toLink: `/introduction/${event.id}`
 		}
@@ -80,7 +80,7 @@ const chipsEvents = computed(() => {
 	existingEvents.push({
 		id: 'maze',
 		title: '赤翠迷蹤',
-		img: '/images/events/maze/maze.svg',
+		img: '/images/events/maze/maze.png',
 		arenaImg: '/images/events/maze/maze_arena.png',
 		toLink: '/introduction/maze'
 	})
