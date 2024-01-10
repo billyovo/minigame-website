@@ -13,9 +13,9 @@
     >
       <template #eventContent="arg">
         <v-btn
-          class="w-100 h-100"
+          class="h-100"
           :style="{background: 'transparent'}"
-          :size="display.mobile.value ? 'small' : 'medium'"
+          block
           @click="clickedEvent = { title: arg.event.title, emote: arg.event.extendedProps.emote }"
         >
           <div
