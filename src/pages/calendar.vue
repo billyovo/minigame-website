@@ -15,6 +15,7 @@
         <v-btn
           class="w-100 h-100"
           :style="{background: 'transparent'}"
+          :size="display.mobile.value ? 'small' : 'medium'"
           @click="clickedEvent = { title: arg.event.title, emote: arg.event.extendedProps.emote }"
         >
           <div
@@ -29,8 +30,8 @@
             </span>
             <img
               :src="`${config.public.baseURL}/logo/events/${arg.event.extendedProps.eventID}/${arg.event.extendedProps.eventID}.png`"
-              :height="60"
-              :width="60"
+              :height="display.mobile.value ? 35 : 60"
+              :width="display.mobile.value ? 35 : 60"
             >
           </div>
         </v-btn>
