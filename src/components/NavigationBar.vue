@@ -69,6 +69,7 @@ defineProps({
       v-show="isSwipingDown && display.mobile.value"
       grow
       rounded
+      :style="{position: 'fixed'}"
       :bg-color="theme.current.value.colors.primary"
     >
       <NuxtLink to="/introduction" :style="{ color: 'white' }">
