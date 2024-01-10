@@ -49,7 +49,7 @@
           >
             生存
             <template #prepend>
-              <NuxtImg src="/images/server/survival.svg" :height="25" :width="25" class="mr-2" />
+              <NuxtImg :src="'/images/server/survival.svg'" :height="25" :width="25" class="mr-2" />
             </template>
           </v-chip>
           <v-chip
@@ -58,7 +58,7 @@
           >
             空島
             <template #prepend>
-              <NuxtImg src="/images/server/skyblock.svg" :height="25" :width="25" class="mr-2" />
+              <NuxtImg :src="'/images/server/skyblock.svg'" :height="25" :width="25" class="mr-2" />
             </template>
           </v-chip>
         </v-chip-group>
