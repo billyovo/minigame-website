@@ -3,6 +3,9 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ['assets/css/shared.css'],
+	site: {
+		url: 'https://minigame.letsdream.today',
+	},
 	build: {
 		transpile: ['vuetify', '@vuepic/vue-datepicker']
 	},
@@ -19,7 +22,7 @@ export default defineNuxtConfig({
 		'@pinia/nuxt',
 		'@nuxt/image',
 		'@nuxtjs/eslint-module',
-		"@nuxtjs/sitemap",
+		'nuxt-simple-sitemap',
 		// '@nuxtjs/storybook',
 		// '@storybook-vue/nuxt-storybook',
 	],
