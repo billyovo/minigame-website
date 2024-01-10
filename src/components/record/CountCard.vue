@@ -5,7 +5,7 @@
     class="pa-2"
   >
     <template #prepend>
-      <NuxtImg :src="imagePath" :height="30" :width="30" />
+      <img :src="imagePath" :height="30" :width="30" />
     </template>
     <template #title>
       {{ data.name }}

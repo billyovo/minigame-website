@@ -27,7 +27,7 @@
             >
               {{ arg.event.title }}
             </span>
-            <NuxtImg
+            <img
               :src="`${config.public.baseURL}/logo/events/${arg.event.extendedProps.eventID}/${arg.event.extendedProps.eventID}.png`"
               :height="60"
               :width="60"

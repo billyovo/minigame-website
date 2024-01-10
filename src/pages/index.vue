@@ -3,7 +3,7 @@
     <NavigationBar transparent />
     <section class="landing d-flex flex-column-reverse align-center">
       <div class="w-100 h-50 d-flex justify-center">
-        <NuxtImg
+        <img
           src="/images/background/avatar.png"
           class="w-100 h-100 mascot"
         />
