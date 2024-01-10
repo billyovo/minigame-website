@@ -23,13 +23,6 @@ export default defineNuxtConfig({
 		// '@storybook-vue/nuxt-storybook',
 	],
 
-	vite: {
-		vue: {
-			template: {
-				transformAssetUrls
-			}
-		}
-	},
 	nitro: {
 		ignore: ['/record', '/news', '/news/**'],
 		prerender: {
