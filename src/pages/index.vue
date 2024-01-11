@@ -3,10 +3,16 @@
     <NavigationBar transparent />
     <section class="landing d-flex flex-column-reverse align-center">
       <div class="w-100 h-50 d-flex justify-center">
-        <img
-          src="/images/background/avatar.png"
-          class="w-100 h-100 mascot"
-        >
+        <v-tooltip location="top" height="60" width="200">
+          <template #activator="{ props }">
+            <img
+              src="/images/background/avatar.png"
+              class="w-100 h-100 mascot"
+              v-bind="props"
+            >
+          </template>
+          <span class="text-h3 text-primary">你好嗎</span>
+        </v-tooltip>
       </div>
       <div class="w-75 d-flex align-center flex-column appear">
         <h1 class="style-font mb-10 text-yellow-darken-2 text-h1">
