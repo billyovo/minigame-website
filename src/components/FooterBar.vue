@@ -29,7 +29,10 @@
         <span>遊戲頭像使用</span>
       </NuxtLink>
       <NuxtLink to="http://azukifont.com/font/azuki.html" class="ma-4 text-secondary">
-        <span>字體使用</span>
+        <span>字體使用1</span>
+      </NuxtLink>
+      <NuxtLink to="https://github.com/max32002/pop-gothic" class="ma-4 text-secondary">
+        <span>字體使用2</span>
       </NuxtLink>
     </div>
 

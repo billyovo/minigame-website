@@ -68,6 +68,7 @@
 
 <script setup lang="ts">
 import { useDisplay, useTheme } from 'vuetify'
+import debounce from 'debounce'
 import { RecordMode, Server } from '~/enums/record'
 import { useRecordStore } from '~/stores/records.store'
 import { useEventsStore } from '~/stores/events.store'
@@ -82,6 +83,8 @@ const recordStore = useRecordStore()
 const stateStore = useApplicationStateStore()
 
 const page = ref(1)
+const isFirstLoad = ref(true)
+
 const observer = ref<IntersectionObserver | null>(null)
 
 /*
@@ -118,11 +121,22 @@ const urlSearch = computed(() => {
 	}
 })
 
-watch(() => route.fullPath, () => {
+await recordStore.fetchRecords(urlParams.value, urlSearch.value)
+
+const debouncedSearch = debounce(async () => {
 	page.value = 1
 	recordStore.resetData()
-	if (window) { window.scrollTo(0, 0) }
-	recordStore.fetchRecords(urlParams.value, urlSearch.value)
+	window.scrollTo(0, 0)
+	await recordStore.fetchRecords(urlParams.value, urlSearch.value)
+}, 500)
+
+watch(() => route.fullPath, async () => {
+	if (isFirstLoad.value) {
+		isFirstLoad.value = false
+		await recordStore.fetchRecords(urlParams.value, urlSearch.value)
+		return
+	}
+	debouncedSearch()
 }, { deep: true, immediate: true })
 
 onMounted(() => {

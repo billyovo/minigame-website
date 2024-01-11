@@ -23,6 +23,9 @@ dependencies:
   '@vuepic/vue-datepicker':
     specifier: ^7.4.1
     version: 7.4.1(vue@3.4.3)
+  debounce:
+    specifier: ^2.0.0
+    version: 2.0.0
   dompurify:
     specifier: ^3.0.8
     version: 3.0.8
@@ -7211,6 +7214,11 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.23.7
+    dev: false
+
+  /debounce@2.0.0:
+    resolution: {integrity: sha512-xRetU6gL1VJbs85Mc4FoEGSjQxzpdxRyFhe3lmWFyy2EzydIcD4xzUvRJMD+NPDfMwKNhxa3PvsIOU32luIWeA==}
+    engines: {node: '>=18'}
     dev: false
 
   /debug@2.6.9:
