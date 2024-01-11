@@ -74,6 +74,7 @@ import { useRecordStore } from '~/stores/records.store'
 import { useEventsStore } from '~/stores/events.store'
 import { useApplicationStateStore } from '~/stores/state.store'
 import type { fetchRecordOptions } from '~/@types/record'
+import { useObserver } from '~/composables/useObserver'
 
 const route = useRoute()
 const display = useDisplay()
@@ -84,8 +85,6 @@ const stateStore = useApplicationStateStore()
 
 const page = ref(1)
 const isFirstLoad = ref(true)
-
-const observer = ref<IntersectionObserver | null>(null)
 
 /*
   why scroller doesn't support multiple items in a row... :(
@@ -103,25 +102,22 @@ const urlParams = computed(() => {
 })
 
 const urlSearch = computed(() => {
+	const commonData: fetchRecordOptions = {
+		limit: 30,
+		dateBefore: (route.query.date as string) ?? null
+	}
+
 	if (urlParams.value.type === RecordMode.RECORD) {
-		const search : fetchRecordOptions = {
-			limit: 30,
-			dateBefore: (route.query.date as string) ?? null
-		}
 		if (recordStore.getRecords.rows[recordStore.getRecords.rows.length - 1]?._id) {
-			search.before = recordStore.getRecords.rows[recordStore.getRecords.rows.length - 1]._id
+			commonData.before = recordStore.getRecords.rows[recordStore.getRecords.rows.length - 1]._id
 		}
-		return search
 	}
 
 	return {
-		limit: 30,
-		dateBefore: (route.query.date as string) ?? null,
+		...commonData,
 		page: page.value
 	}
 })
-
-await recordStore.fetchRecords(urlParams.value, urlSearch.value)
 
 const debouncedSearch = debounce(async () => {
 	page.value = 1
@@ -139,20 +135,7 @@ watch(() => route.fullPath, async () => {
 	debouncedSearch()
 }, { deep: true, immediate: true })
 
-onMounted(() => {
-	observer.value = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (!entry.isIntersecting) { return }
-			loadMore()
-		})
-	})
-
-	observer.value.observe(document.querySelector('.loading-button')!)
-})
-
-onBeforeUnmount(() => {
-	observer.value?.disconnect()
-})
+useObserver('.loading-button', loadMore)
 
 async function loadMore () {
 	page.value++

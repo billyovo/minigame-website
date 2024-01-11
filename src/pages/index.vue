@@ -34,7 +34,7 @@
         </div>
       </v-container>
     </section>
-    <FooterBar/>
+    <FooterBar />
   </div>
 </template>
 
