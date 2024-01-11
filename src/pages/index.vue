@@ -3,7 +3,7 @@
     <NavigationBar transparent />
     <section class="landing d-flex flex-column-reverse align-center">
       <div class="w-100 h-50 d-flex justify-center">
-        <v-tooltip location="top" height="60" width="200">
+        <v-tooltip location="top" height="60" width="200" :open-on-click="true">
           <template #activator="{ props }">
             <img
               src="/images/background/avatar.png"
