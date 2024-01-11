@@ -6,8 +6,15 @@
 }
 
 @font-face {
-  font-family: uzura;
-  src: url('../font/uzura.ttf');
+  font-family: azuki;
+  src: url('../font/azuki.ttf');
+}
+
+@font-face {
+  font-family: azuki;
+  src: url('../font/jason.ttf');
+  unicode-range: U+78B0;
+  font-display: swap;
 }
 
 /* what kind of UI library add !important to their css????? wtf?? */
@@ -15,7 +22,7 @@
 body h1, body h2, body h3, body h4, body h5, body h6, 
 body .text-h1, body .text-h2, body .text-h3, body .text-h4, body .text-h5, body .text-h6 
 body .style-font {
-  font-family: uzura !important;
+  font-family: azuki !important;
 }
 
 a {

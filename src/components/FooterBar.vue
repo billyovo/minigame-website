@@ -28,6 +28,9 @@
       <NuxtLink to="https://crafatar.com/" class="ma-4 text-secondary">
         <span>遊戲頭像使用</span>
       </NuxtLink>
+      <NuxtLink to="http://azukifont.com/font/azuki.html" class="ma-4 text-secondary">
+        <span>字體使用</span>
+      </NuxtLink>
     </div>
 
     <v-divider class="ma-3" />

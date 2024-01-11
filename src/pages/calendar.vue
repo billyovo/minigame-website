@@ -4,11 +4,11 @@
   </h1>
   <v-container
     class="d-flex justify-center"
-    :style="{height: '80vh'}"
+    :style="{height: '100vh'}"
   >
     <FullCalendar
       :options="calendarOption"
-      class="w-100 h-50"
+      class="w-100 h-75"
       :style="{ 'min-height': '600px'}"
     >
       <template #eventContent="arg">
@@ -23,16 +23,17 @@
           >
             <span
               v-if="!display.mobile.value"
-              class="d-block"
+              class="d-block text-h6"
               :style="{'font-size': 'clamp(1rem, 1.5vw, 2rem)'}"
             >
               {{ arg.event.title }}
             </span>
-            <img
-              :src="`${config.public.baseURL}/logo/events/${arg.event.extendedProps.eventID}/${arg.event.extendedProps.eventID}.png`"
-              :height="display.mobile.value ? 35 : 60"
-              :width="display.mobile.value ? 35 : 60"
-            >
+            <div class="w-100 h-100">
+              <img
+                :src="`${config.public.baseURL}/logo/events/${arg.event.extendedProps.eventID}/${arg.event.extendedProps.eventID}.png`"
+                :style="{height: 'clamp(1rem, 7vw, 3rem)', width: 'clamp(1rem, 7vw, 3rem)'}"
+              >
+            </div>
           </div>
         </v-btn>
       </template>
