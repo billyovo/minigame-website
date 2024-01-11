@@ -49,7 +49,7 @@
           >
             生存
             <template #prepend>
-              <img :src="'/images/server/survival.png'" :height="25" :width="25" class="mr-2">
+              <img alt="生存" :src="'/images/server/survival.png'" :height="25" :width="25" class="mr-2">
             </template>
           </v-chip>
           <v-chip
@@ -58,7 +58,7 @@
           >
             空島
             <template #prepend>
-              <img :src="'/images/server/skyblock.png'" :height="25" :width="25" class="mr-2">
+              <img alt="空島" :src="'/images/server/skyblock.png'" :height="25" :width="25" class="mr-2">
             </template>
           </v-chip>
         </v-chip-group>
@@ -83,7 +83,7 @@
           >
             {{ eventData.title }}
             <template v-if="eventData.emote" #prepend>
-              <img :src="`/images/events/${eventData.id}/${eventData.id}.png`" :height="25" :width="25" class="mr-2">
+              <img :alt="eventData.title" :src="`/images/events/${eventData.id}/${eventData.id}.png`" :height="25" :width="25" class="mr-2">
             </template>
           </v-chip>
         </v-chip-group>

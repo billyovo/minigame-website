@@ -8,7 +8,7 @@
     <EventSelector />
 
     <div class="container mt-5 w-100">
-      <img src="/images/events/drop/drop_arena.png" class="w-100">
+      <img src="/images/events/drop/drop_arena.png" alt="高空墜落遊戲場地" class="w-100">
     </div>
 
     <v-row
@@ -29,7 +29,7 @@
         <h2>勝利獎勵</h2>
       </v-col>
       <v-col cols="10" class="d-flex align-center">
-        <img src="/images/events/drop/drop_winner.png" class="w-100">
+        <img src="/images/events/drop/drop_winner.png" alt="高空墜落 勝出者獎勵" class="w-100">
       </v-col>
     </v-row>
   </v-container>

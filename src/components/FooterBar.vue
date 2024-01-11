@@ -7,6 +7,7 @@
         v-for="social in socials"
         :key="social.icon"
         :to="social.link"
+        aria-label="social.name"
       >
         <v-btn
           variant="text"
@@ -49,19 +50,23 @@ import '@fortawesome/fontawesome-free/css/all.css'
 const socials = computed(() => [
 	{
 		icon: 'mdi:mdi-facebook',
-		link: 'https://dcraft.org/facebook'
+		link: 'https://dcraft.org/facebook',
+		name: '築夢物語Facebook連結'
 	},
 	{
 		icon: 'mdi:mdi-twitter',
-		link: 'https://twitter.com/DreamCrafter_MC'
+		link: 'https://twitter.com/DreamCrafter_MC',
+		name: '築夢物語Twitter連結'
 	},
 	{
 		icon: 'fa-brands fa-discord',
-		link: 'https://dcraft.org/discord'
+		link: 'https://dcraft.org/discord',
+		name: '築夢物語Discord連結'
 	},
 	{
 		icon: 'mdi:mdi-instagram',
-		link: 'https://www.instagram.com/mc.dreamcrafter/'
+		link: 'https://www.instagram.com/mc.dreamcrafter/',
+		name: '築夢物語Instagram連結'
 	}
 ])
 </script>

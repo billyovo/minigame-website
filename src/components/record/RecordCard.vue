@@ -19,7 +19,7 @@
     <template #text>
       <v-row>
         <v-col cols="12" class="d-flex align-center">
-          <img :src="`${config.public.baseURL}/logo/events/${eventID}/${eventID}.svg`" :height="25" :width="25">
+          <img :alt="data.event" :src="`${config.public.baseURL}/logo/events/${eventID}/${eventID}.svg`" :height="25" :width="25">
           <span class="ml-1">{{ data.event }}</span>
         </v-col>
       </v-row>

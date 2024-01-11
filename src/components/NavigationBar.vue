@@ -31,7 +31,7 @@ defineProps({
   >
     <v-app-bar-title v-if="!display.mobile.value">
       <NuxtLink to="/">
-        <img :src="'/images/logo/brand.png'" :height="50" class="py-2">
+        <img :src="'/images/logo/brand.png'" alt="築夢物語" :height="50" class="py-2">
       </NuxtLink>
     </v-app-bar-title>
     <v-spacer />
@@ -59,7 +59,7 @@ defineProps({
         優勝記錄
       </v-btn>
     </NuxtLink>
-    <v-btn>
+    <v-btn aria-label="切換網頁顏色">
       <v-icon size="x-large" :icon="themeIcon" @click="toggleTheme" />
     </v-btn>
   </v-app-bar>

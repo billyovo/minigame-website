@@ -7,6 +7,7 @@
           <template #activator="{ props }">
             <img
               src="/images/background/avatar.png"
+              alt="小遊戲小妹"
               class="w-100 h-100 mascot"
               v-bind="props"
             >

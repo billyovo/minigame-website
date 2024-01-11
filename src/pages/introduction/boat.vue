@@ -8,7 +8,7 @@
     <EventSelector />
 
     <div class="container mt-5 w-100">
-      <img src="/images/events/boat/boat_arena.png" class="w-100">
+      <img src="/images/events/boat/boat_arena.png" alt="七彩羊駝保衛戰遊戲場地" class="w-100">
     </div>
 
     <v-row
@@ -28,7 +28,7 @@
         <h2>勝利獎勵</h2>
       </v-col>
       <v-col cols="10" class="d-flex align-center">
-        <img src="/images/events/boat/boat_winner.png" class="w-100">
+        <img src="/images/events/boat/boat_winner.png" alt="七彩羊駝保衛戰 勝出者獎勵" class="w-100">
       </v-col>
     </v-row>
   </v-container>

@@ -11,7 +11,7 @@
       <NuxtLink v-for="event in chipsEvents" :key="event.id" :to="event.toLink" active-class="current-link" class="mt-2">
         <v-chip size="large" :ripple="false" class="mx-2" :color="route.path === event.toLink ? theme.current.value.colors.secondary : ''">
           <template #prepend>
-            <img :src="event.img" :height="30" :width="30">
+            <img :alt="event.title" :src="event.img" :height="30" :width="30">
           </template>
           <span class="ml-2">{{ event.title }}</span>
         </v-chip>
@@ -35,7 +35,7 @@
       <div class="d-flex justify-center flex-wrap">
         <NuxtLink to="/introduction">
           <v-card class="ma-6" :elevation="5">
-            <img src="/images/events/lobby.png" :height="150">
+            <img alt="小遊戲大廳" src="/images/events/lobby.png" :height="150">
             <v-card-text class="d-flex align-center">
               <span>活動簡介</span>
             </v-card-text>
@@ -43,9 +43,9 @@
         </NuxtLink>
         <NuxtLink v-for="event in chipsEvents" :key="event.id" :to="event.toLink">
           <v-card class="ma-6" :elevation="5">
-            <img :src="event.arenaImg" :height="150">
+            <img :alt="event.title" :src="event.arenaImg" :height="150">
             <v-card-text class="d-flex align-center">
-              <img :src="event.img" class="mr-2" :height="30">
+              <img :alt="event.title" :src="event.img" class="mr-2" :height="30">
               <span>{{ event.title }}</span>
             </v-card-text>
           </v-card>

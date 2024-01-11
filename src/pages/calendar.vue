@@ -31,6 +31,7 @@
             <div class="w-100 h-100">
               <img
                 :src="`${config.public.baseURL}/logo/events/${arg.event.extendedProps.eventID}/${arg.event.extendedProps.eventID}.png`"
+                :alt="arg.event.title"
                 :style="{height: 'clamp(1rem, 7vw, 3rem)', width: 'clamp(1rem, 7vw, 3rem)'}"
               >
             </div>
