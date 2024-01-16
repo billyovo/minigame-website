@@ -8,6 +8,7 @@
         :key="social.icon"
         :to="social.link"
         aria-label="social.name"
+        class="text-white"
       >
         <v-btn
           variant="text"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NavigationBar transparent />
+    <NavigationBar transparent icon-color="white" />
     <section class="landing d-flex flex-column-reverse align-center">
       <div class="w-100 h-50 d-flex justify-center">
         <v-tooltip location="top" height="60" width="200" :open-on-click="true">
@@ -12,14 +12,14 @@
               v-bind="props"
             >
           </template>
-          <span class="text-h3 text-primary">你好嗎</span>
+          <span class="text-h3 text-white">你好嗎</span>
         </v-tooltip>
       </div>
       <div class="w-75 d-flex align-center flex-column appear">
         <h1 class="style-font mb-10 text-yellow-darken-2 text-h1">
           小遊戲
         </h1>
-        <h2 class="style-font text-h3">
+        <h2 class="style-font text-h3 text-white">
           星期一、三、五、六晚上舉行
         </h2>
       </div>
