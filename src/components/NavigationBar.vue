@@ -47,7 +47,6 @@ const computedIconColor = computed(() => {
 </script>
 <template>
   <v-app-bar
-    rounded
     :elevation="0"
     :color="isNavBarTransparent ? 'transparent' : theme.current.value.colors.primary"
   >
