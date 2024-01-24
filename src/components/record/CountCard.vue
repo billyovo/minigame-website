@@ -5,7 +5,8 @@
     class="pa-2"
   >
     <template #prepend>
-      <NuxtImg placeholder="/images/record/steve.jpg" :src="imagePath" :height="30" :width="30" />
+      <img v-if="data.UUID === 'draw_result'" :src="imagePath" :height="30" :width="30" alt="平手圖示" />
+      <NuxtImg v-else placeholder="/images/record/steve.jpg" :src="imagePath" :height="30" :width="30" :alt="`${data.name}玩家頭像`" />
     </template>
     <template #title>
       {{ data.name }}
