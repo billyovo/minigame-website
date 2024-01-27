@@ -1,4 +1,5 @@
 <template>
+  <NuxtPwaManifest/>
   <v-app
     v-touch="{
       up: () => setIsSwipingDown(false),
